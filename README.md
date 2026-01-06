@@ -3,44 +3,10 @@ Give a clean architecture description for .Net core application solution for rep
 
 Solution Structure
 
-Worksphere/
-├── src/
-│   ├── Worksphere.Core/                    # Domain Layer (Entities, Value Objects)
-│   │   ├── Entities/
-│   │   ├── ValueObjects/
-│   │   ├── Enums/
-│   │   └── Interfaces/
-│   │
-│   ├── Worksphere.Application/             # Application Layer (Use Cases)
-│   │   ├── Projects/
-│   │   │   ├── Commands/
-│   │   │   ├── Queries/
-│   │   │   ├── DTOs/
-│   │   │   └── Validators/
-│   │   ├── Users/
-│   │   └── Common/
-│   │       ├── Interfaces/
-│   │       └── Behaviors/
-│   │
-│   ├── Worksphere.Infrastructure/          # Infrastructure Layer
-│   │   ├── Persistence/
-│   │   │   ├── Context/
-│   │   │   ├── Configurations/
-│   │   │   ├── Migrations/
-│   │   │   └── Repositories/
-│   │   ├── Identity/
-│   │   ├── FileStorage/
-│   │   └── ExternalServices/
-│   │
-│   └── Worksphere.API/                     # Presentation Layer
-│       ├── Controllers/
-│       ├── Middleware/
-│       ├── Filters/
-│       └── Program.cs
-│
-├── tests/
-│   ├── Worksphere.Core.Tests/
-│   ├── Worksphere.Application.Tests/
-│   └── Worksphere.API.Tests/
-│
-└── Dockerfile
+WorkSphere/
+├── WorkSphere.API/          # REST API Layer
+├── WorkSphere.Web/          # MVC Web Application
+├── WorkSphere.Application/  # Business Logic Layer
+├── WorkSphere.Domain/       # Core Entities & Interfaces
+├── WorkSphere.Infrastructure/ # Data Access & External Services
+└── WorkSphere.Shared/       # Shared Utilities & DTOs
